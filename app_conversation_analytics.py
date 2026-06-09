@@ -271,6 +271,7 @@ def build_analysis(conversations, start_date, end_date):
         [
             "id_conv",
             "question_id",
+            "hotelCode",
             "nb_msg_question",
             "date_question",
             "heure_question",
