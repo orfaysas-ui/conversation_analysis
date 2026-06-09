@@ -646,7 +646,7 @@ def agent_reply_analysis (t) :
     
 def get_questions(x):
     
-    t = x.copy()
+    t = x[~x.speaker.str.contains('csat')]
     t = t.sort_values(["id", "ordre_message_conv"])
 
     t["speaker_type"] = t["speaker"].apply(classify_speaker)
