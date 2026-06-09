@@ -238,7 +238,7 @@ def bot_answer_analysis(q) :
     return(r)
     
 def question_gen_metrics(t):
-    r=(t.groupby(['id','question_id']).agg(
+    r=(t.groupby(['id','question_id','hotelCode']).agg(
         nb_msg_question = ('ordre_message_question','max')
                  )
         .reset_index())
